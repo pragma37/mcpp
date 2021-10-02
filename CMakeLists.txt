@@ -40,14 +40,13 @@ if(UNIX)
 
 	target_compile_options(mcpp PRIVATE "-O2")
 
-	if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-		set_property(TARGET mcpp PROPERTY POSITION_INDEPENDENT_CODE ON)
+	set_property(TARGET mcpp PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-		target_compile_options(mcpp PRIVATE
-			"-Wno-maybe-uninitialized"
-			"-Wno-unused-result"
-		)
-	endif()
+	target_compile_options(mcpp PRIVATE
+		"-Wno-maybe-uninitialized"
+		"-Wno-unused-result"
+		"-Wno-implicit-function-declaration"
+	)
 
 	install(TARGETS mcpp
 		ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
