@@ -11,6 +11,8 @@ endif()
 
 project(mcpp VERSION 2.7.2.14)
 
+set(CMAKE_C_STANDARD 90)
+
 add_library(mcpp STATIC
 	"config.h"
 	"configed.H"
