@@ -268,7 +268,7 @@ static void     init_main( void)
     sh_line = 0;
 }
 
-int     mcpp_lib_main
+int main
 (
     int argc,
     char ** argv
