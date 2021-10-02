@@ -11,7 +11,7 @@ endif()
 
 project(mcpp VERSION 2.7.2.14)
 
-add_executable(mcpp
+add_library(mcpp STATIC
 	"config.h"
 	"configed.H"
 	"directive.c"
@@ -77,4 +77,4 @@ elseif(WIN32)
 		)
 	endif()
 endif()
-# install(TARGETS mcpp DESTINATION lib)
+install(TARGETS mcpp DESTINATION lib)
