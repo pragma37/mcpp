@@ -41,6 +41,7 @@
 #include    "internal.H"
 
 #if     HOST_SYS_FAMILY == SYS_UNIX
+#define _XOPEN_SOURCE 500
 #include    "unistd.h"              /* For getcwd(), readlink() */
 #elif   HOST_COMPILER == MSC || HOST_COMPILER == LCC
 #include    "direct.h"
