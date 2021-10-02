@@ -47,7 +47,9 @@ if(UNIX)
 
 		target_compile_options(mcpp PRIVATE
 			"-Wno-maybe-uninitialized"
+			"-Wno-implicit-function-declaration"
 			"-Wno-unused-result"
+			"-Wno-error"
 		)
 	endif()
 
