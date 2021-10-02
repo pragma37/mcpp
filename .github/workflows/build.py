@@ -15,7 +15,7 @@ if platform.system() == 'Windows': #Multi-config generators, like Visual Studio
     subprocess.check_call(['cmake', '--build', '.', '--config', 'Release'], cwd=build_dir)
 else: #Single-config generators
     subprocess.check_call(['cmake', '-D', 'CMAKE_RUNTIME_OUTPUT_DIRECTORY='+bin_dir, main_dir], cwd=build_dir)
-    subprocess.check_call(['cmake', '--build', '.'], cwd=build_dir)
+    subprocess.check_call(['cmake', '--build', '.', '-Wno-error'], cwd=build_dir)
 
 shutil.make_archive(os.path.join('mcpp'), 'zip', bin_dir, '.')
 
