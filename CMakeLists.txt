@@ -74,6 +74,8 @@ elseif(WIN32)
 			"/wd4146"
 			"/wd4018"
 		)
+
+		target_sources(mcpp PRIVATE utf8.manifest)
 	endif()
 endif()
 # install(TARGETS mcpp DESTINATION lib)
