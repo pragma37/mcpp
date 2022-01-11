@@ -448,8 +448,7 @@ static void version( void)
     const char *    mes[] = {
 /* Write messages here, for example, "MySomeTool with ".    */
         "MCPP V.2.7.2 (2008/11)"
-        , "https://github.com/zeroc-ice/mcpp"
-        , "compiler-independent-build "
+        , "https://github.com/pragma37/mcpp"
         , NULL
     };
 
